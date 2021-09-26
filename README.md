@@ -1,3 +1,3 @@
 # みんなのマジポエム
 
-Twitter: https://twitter.com/Poems_maji
+https://twitter.com/Poems_maji
