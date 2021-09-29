@@ -1,14 +1,17 @@
 .App {
-  text-align: center
+  text-align: center;
 }
 
 .logo {
+  position: absolute;
   height: 30vmin;
   pointer-events: none;
-  z-index: 20;
 }
 
 .header {
+  position: relative;
+  overflow: hidden;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,9 +19,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  z-index: 20;
 }
 
 .link {
   color: #b318f0;
+}
+
+.blob {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
 }
