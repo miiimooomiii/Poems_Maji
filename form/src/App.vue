@@ -3,12 +3,8 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 </script>
 
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+<template class="bg">
+  <img id="logo" alt="Logo" src="./assets/logo.svg" />
   <router-view />
 </template>
 
@@ -28,6 +24,23 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.bg {
+  background-image: url("./blob-scene-haikei.svg");
+}
+template {
+  position: relative;
+}
+
+#blob {
+  position: absolute;
+}
+
+#logo {
+  text-align: center;
+  width: 40vmin;
+  position: relative;
 }
 
 #nav {
