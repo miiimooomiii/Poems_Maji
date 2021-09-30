@@ -1,20 +1,30 @@
 .App {
   text-align: center;
+  position: fixed;
 }
 
-.logobox {
-  height: 55vmin;
-  pointer-events: none;
-  position: fixed;
+blobbox {
+  width: 80vmin;
+  height: 56vmin;
   top: 50%;
   left: 50%;
+  position: fixed;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  transition: 2s;
+}
+
+blobbox.mini {
+  width: 30vmin;
+  height: 21vmin;
+  top: 1%;
+  left: 5%;
 }
 
 .logo {
-  height: 50%;
+  height: 24vmin;
   position: fixed;
+  pointer-events: none;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -31,6 +41,9 @@
   color: black;
 }
 
+.body {
+}
+
 .link {
   color: #b318f0;
   display: none;
@@ -39,18 +52,20 @@
 .blob {
   content: '';
   display: block;
-  width: 80vmin;
-  height: 55vmin;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
   background-size: 1600% 1600%;
-  transform-origin: 50% 48% -1;
+  transform-origin: 50% 50% -1;
   transform-style: preserve-3d;
   perspective: 1000px;
   animation:
-    transform 50s ease-in-out infinite both alternate,
-    movement 40s ease-in-out infinite both;
+    transform 40s ease-in-out infinite both alternate,
+    movement 30s ease-in-out infinite both;
 }
-
 
 @keyframes transform {
     0%,
