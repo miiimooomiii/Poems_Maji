@@ -1,21 +1,52 @@
-import styles from "./App.module.css";
 
-import blob from "./action"
+import { blob, blobscroll, thank } from './action';
 
-import logo from "./logo.svg";
+import styles from './App.module.css';
+
+
+import logo from './logo.svg';
+
+var nowPosition = 0;
 
 function App() {
   return (
     <div class={styles.App}>
-      <header class={styles.header}>
-        <blobbox id="blobbox">
-          <button class={styles.blob} onClick={blob} />
-        </blobbox>
-        <img src={logo} class={styles.logo} alt="logo" />
+      <header class={styles.header} onWheel={blob}>
+          <button class={styles.blob} id='blob' style='background-color:#000000' onClick={blob}>
+            <img src={logo} class={styles.logo} id='logo' alt='logo' />
+          </button>
       </header>
-      <div class={styles.body}>
-        <p>あ</p>
-      </div>
+      <appbody id='appbody' class={styles.invisible}>
+        <form class={styles.form} action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSd03E7BPIpR0Y9E-vfnlUTf2eU4J3OGripRMN_YrJGthUE89w/formResponse' method="post" target="hidden_iframe" onsubmit={thank}>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <div class={styles.column}>
+            <label for='title'>題名</label>
+            <input type='text' id='title' name='entry.1866521228' class={styles.short} placeholder="題名（空欄の場合は 無題 となります）"></input>
+          </div>
+          <div class={styles.column}>
+            <label for='poem'>本文</label>
+            <textarea id='poem' name='entry.1602729063' placeholder="本文*" required=""></textarea>
+          </div>
+          <div class={styles.column}>
+            <label for='name'>著者名</label>
+            <input type='text' id='name' name='entry.1285093387' class={styles.short} placeholder="著者名（空欄の場合は 匿名 となります）"></input>
+          </div>
+          <div class={styles.column}>
+            <label for='addition'>付記</label>
+            <textarea id='addition' name='entry.2007810462' placeholder="付記"></textarea>
+          </div>
+          <div class={styles.column}>
+            <label for='link'>リンク</label>
+            <input type='text' id='link' name='entry.272121178' placeholder="リンク"></input>
+          </div>
+          <p><button type="submit" class={styles.submit} name="button" value="送信">送信</button></p>
+        </form>
+      </appbody>
+      <thankblob class={styles.invisible} id='thankblob'>
+        <div class={styles.blob} style='background-color:#f4f4f4; pointer-events:none;'>
+          <p class={styles.thankmessage}>ありがとうございます。</p>
+        </div>
+      </thankblob>
     </div>
   );
 }
