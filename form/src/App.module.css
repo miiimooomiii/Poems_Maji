@@ -43,6 +43,7 @@ label {
 
 input[type='text'],
 textarea {
+  -webkit-appearance: none;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -283,7 +284,7 @@ thankblob {
 }
 
 @media screen and (max-width: 480px) {
-	.App {
+  .App {
     font-size: 13px;
   }
 }
