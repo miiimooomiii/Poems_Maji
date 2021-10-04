@@ -3,7 +3,7 @@ import styles from './App.module.css';
 var timer1 = null;
 var timer2 = null;
 
-export function blob() {
+export function Blob() {
   const target = document.getElementById('blob');
   const bodytarget = document.getElementById('appbody');
   const logotarget = document.getElementById('logo');
@@ -29,11 +29,11 @@ export function blob() {
   }, 400);
 }
 
-export function blobscroll(nowPosition) {
+export function Blobscroll(nowPosition) {
   let diffPosition 
 }
 
-export function thank() {
+export function Thank() {
   const target = document.getElementById('blob');
   const bodytarget = document.getElementById('appbody');
   const thanktarget = document.getElementById('thankblob');
