@@ -5,7 +5,7 @@ var timer2 = null;
 
 export function Blob() {
   const target = document.getElementById('blob');
-  const bodytarget = document.getElementById('appbody');
+  const bodytarget = document.getElementById('form');
   const logotarget = document.getElementById('logo');
   clearTimeout(timer1);
   target.disabled = true;
@@ -14,8 +14,10 @@ export function Blob() {
     timer1 = setTimeout(function () {
       logotarget.classList.add(styles.invisible);
       bodytarget.classList.remove(styles.invisible);
+      bodytarget.classList.add(styles.visible);
     }, 400);
   } else {
+    bodytarget.classList.remove(styles.visible);
     bodytarget.classList.add(styles.invisible);
     timer1 = setTimeout(function () {
       logotarget.classList.remove(styles.invisible);
@@ -35,13 +37,15 @@ export function Blobscroll(nowPosition) {
 
 export function Thank() {
   const target = document.getElementById('blob');
-  const bodytarget = document.getElementById('appbody');
+  const bodytarget = document.getElementById('form');
   const thanktarget = document.getElementById('thankblob');
   target.classList.remove(styles.mini);
+  bodytarget.classList.remove(styles.visible);
   bodytarget.classList.add(styles.invisible);
   target.classList.add(styles.large);
   clearTimeout(timer1);
   timer1 = setTimeout(function () {
     thanktarget.classList.remove(styles.invisible);
+    thanktarget.classList.add(styles.visible);
   }, 400);
 }

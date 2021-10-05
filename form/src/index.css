@@ -1,31 +1,19 @@
-html,
-body{
-	width:100%;
-	height:100%;
-	overflow:hidden;
-	margin:0;
-	padding:0
-	border:none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&display=swap');
 
+html,
 body {
   margin: 0;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  min-height: 100vh;
+}
+
+body,
+input,
+textarea,
+.flexTextarea__dummy,
+.submit {
+  font-family: 'Shippori Mincho', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3', Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
   background-color: #f4f4f4;
-  position: fixed;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-input, textarea, .submit {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
 }
