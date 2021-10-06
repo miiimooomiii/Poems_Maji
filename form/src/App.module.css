@@ -92,6 +92,20 @@ label:focus-within {
   transition: 0.1s;
 }
 
+.requiredAm {
+  top: 0.97em;
+  left: 7.5em;
+  background-color:#e95151;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W6", "メイリオ", sans-serif;
+  font-size: 0.5em;
+  font-weight: 600;
+  color: #f4f4f4;
+  border-radius: 4px;
+  border: 0;
+  padding: 0 0.6em;
+  transition: 0.1s;
+}
+
 .required.filled {
   background-color:#d6d6d6;
 }
@@ -304,7 +318,7 @@ textarea:focus {
   position: fixed;
   pointer-events: none;
   -webkit-user-select: none;
-  -moz-user-select: nonea;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
@@ -332,7 +346,7 @@ thankblob {
 
 .agreement {
   position: absolute;
-  top: 0.15em;
+  top: 0.16em;
   left: 8.5em;
   font-size: 0.7em;
   font-weight: 500;
@@ -392,5 +406,13 @@ thankblob {
   .required {
     top: 0.25em;
     left: 6.5em;
+  }
+  .requiredAm {
+    top: 0.6em;
+    left: 4em;
+  }
+  .agreement {
+    top: -0.2em;
+    left: 5.5em;
   }
 }

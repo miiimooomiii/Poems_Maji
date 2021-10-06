@@ -40,7 +40,7 @@ function App() {
           </label>
           <label class={styles.column} for='check'>
             <input id='check' type='checkbox' required></input>
-            <p class={styles.subinfo} class={styles.required} style='top:0.96em;left:7.5em'>必須</p>
+            <p class={styles.subinfo} class={styles.requiredAm}>必須</p>
             <p class={styles.agreement}>利用規約に同意します。</p>
           </label>
           <button type='submit' class={styles.submit} name="button" value="送信">送信</button>
