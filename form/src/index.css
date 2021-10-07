@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Courier+Prime&family=Shippori+Mincho:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Noto+Sans+JP&family=Shippori+Mincho+B1:wght@500;800&display=swap');
+
+@font-face {
+  font-family: 'Shippori Mincho B1 Medium';
+  src: url('./ShipporiMinchoB1-Medium.woff') format('opentype');
+}
 
 html,
 body {
@@ -11,7 +16,7 @@ input,
 textarea,
 .flexTextarea__dummy,
 .submit {
-  font-family: 'Shippori Mincho', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3', Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
+  font-family: 'Shippori Mincho B1 Medium', 'Shippori Mincho B1', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3', Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 500;
