@@ -1,8 +1,7 @@
+/* ---------------- Styles ---------------- */
 .App {
   text-align: center;
-  width: 100vw;
   min-height: 100%;
-  font-size: 16px;
   overflow: auto;
   display: block;
 }
@@ -11,24 +10,17 @@
   position: fixed;
 }
 
-appbody {
-  pointer-events: none;
+.appbody {
   color: #000000;
-  position: absolute;
+  display: block;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
   width: 92vw;
+  min-width: 10em;
   min-height: 90%;
   max-width: 50em;
-  min-width: 10em;
-  top: 10vh;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-@supports (-webkit-touch-callout: none) {
-  appbody {
-    height: -webkit-fill-available;
-  }
+  pointer-events: none;
 }
 
 .form {
@@ -46,124 +38,68 @@ appbody {
 .column {
   display: block;
   position: relative;
-}
-
-label {
-  text-align: start;
-  color: #b3b3b3;
-  font-size: 1.6em;
-  position: absolute;
-  margin-bottom: 0.4em;
-  padding: 0.35em 1em 1em;
-  font-weight: 800;
-  font-family: 'Shippori Mincho B1', serif;
-  transition: 0.1s;
-  cursor: pointer;
   border-radius: 12px;
-  border: 1px solid #d7d7d7;
+  margin-bottom: 0.4em;
+  color: #b3b3b3;
   background-color: #f4f4f4;
+  border: 1px solid #d7d7d7;
 }
 
-label:hover,
-label:focus-within {
+.column:hover,
+.column:focus-within {
+  color:#2d2d2d;
+}
+
+.column:hover {
+  border-color: #a5a4a2;
+}
+
+.column:focus-within {
+  border-color: #656462;
+}
+.prColumn {
   color:#2d2d2d;
   border-color: #a5a4a2;
 }
 
+.prColumn .column {
+  border:0;
+  margin-bottom:0;
+}
+
+.label {
+  font-size: 1.6em;
+  padding: 0.35em 1em 1em;
+  text-align: start;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
 .subinfo {
   position: absolute;
-  top: 0.5em;
+  top: 0.25em;
   left: 8.5em;
   font-size: 0.58em;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  -webkit-font-feature-settings: "palt";
-     -moz-font-feature-settings: "palt";
-          font-feature-settings: "palt";
-  font-family: 'Shippori Mincho B1 Medium', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
 }
 
 .required {
-  top: 0.52em;
-  left: 7em;
+  margin-top: 1.25em;
   background-color:#e95151;
-  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W6", "メイリオ", sans-serif;
+  font-family: 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
   font-size: 0.5em;
-  font-weight: 600;
+  font-weight: 700;
   color: #f4f4f4;
   border-radius: 4px;
   border: 0;
-  padding: 0 0.6em;
-  transition: 0.1s;
+  padding: 0.1em 0.6em 0;
 }
 
-.requiredAm {
-  top: 0.97em;
-  left: 7.5em;
-  background-color:#e95151;
-  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W6", "メイリオ", sans-serif;
-  font-size: 0.5em;
-  font-weight: 600;
-  color: #f4f4f4;
-  border-radius: 4px;
-  border: 0;
-  padding: 0 0.6em;
-  transition: 0.1s;
+.prColumn .required {
+  margin-top: 1.5em;
 }
 
-.required.filled {
+.filled {
   background-color:#d6d6d6;
-}
-
-input[type='text'],
-input[type='url'],
-textarea {
-  -webkit-appearance: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  min-width: 10em;
-  padding: 0.7em 1em;
-  font-size: 0.75em;
-  color: #2d2d2d;
-  caret-color: #0a84ff;
-  border: 0;
-  outline: 0;
-  border-radius: 8px;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-  letter-spacing: 0.06em;
-  line-height: 1.8em;
-  -webkit-font-feature-settings: "palt";
-     -moz-font-feature-settings: "palt";
-          font-feature-settings: "palt";
-  font-family: 'Shippori Mincho B1 Medium', 'Shippori Mincho B1', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
-}
-
-input[type='text'],
-input[type='url'] {
-  height: 2.5em;
-  margin-bottom: -0.5em;
-}
-
-input[type='url'] {
-  font-family: 'Courier Prime', 'Yu Gothic Bold', '游ゴシック Bold', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'Noto Sans JP', 'メイリオ', monospace;
-}
-
-textarea {
-  margin-bottom: -0.8em;
-  resize: none;
-  transition: 0.1s;
-}
-
-input[type='text']:focus,
-input[type='url']:focus,
-textarea:focus {
-  -webkit-box-shadow: inset 2px 2px 3px #cbcbcb,
-    inset -2px -2px 3px #ffffff;
-          box-shadow: inset 2px 2px 3px #cbcbcb,
-    inset -2px -2px 3px #ffffff;
 }
 
 .visible {
@@ -180,9 +116,8 @@ textarea:focus {
   opacity: 0%;
 }
 
-.link {
-  color: #b318f0;
-  display: none;
+.fixed {
+  position: fixed;
 }
 
 .blob {
@@ -192,9 +127,6 @@ textarea:focus {
   border: none;
   cursor: pointer;
   background-size: 1600% 1600%;
-  -webkit-transform-origin: 50% 50% -1;
-      -ms-transform-origin: 50% 50% -1;
-          transform-origin: 50% 50% -1;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-perspective: 1000px;
@@ -205,16 +137,153 @@ textarea:focus {
           animation:
     transform 30s ease-in-out infinite both alternate,
     movement 20s ease-in-out infinite both;
-
   width: 80vmin;
   height: 56vmin;
   min-width: 200px;
   min-height: 140px;
+  transform-origin: translate(calc(50vw - 50%), calc(50vh - 50%));
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
   -webkit-transition: all 0.4s cubic-bezier(0, 0.3, 0.01, 1.0);
   -o-transition: all 0.4s cubic-bezier(0, 0.3, 0.01, 1.0);
   transition: all 0.4s cubic-bezier(0, 0.3, 0.01, 1.0);
 }
+
+.blob.mini {
+  transform: translate(-60%, calc(-65%)) scale(2.25, 0.65);
+  margin: 0;
+}
+
+.blob.large {
+  width: 900%;
+  height: 315%;
+  min-width: 300px;
+  min-height: 105px;
+  top: -148%;
+  left: -148%;
+  pointer-events: none;
+}
+
+.logo {
+  height: 24vmin;
+  min-height: 60px;
+  position: fixed;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  -webkit-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+  -o-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+  transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+}
+
+.thankblob {
+  -webkit-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+  -o-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+  transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+}
+
+.thankmessage {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.ag:hover {
+  text-decoration: underline;
+}
+
+.agreementswitch {
+  font-size: 1.12em;
+  padding: 0.75em 1em;
+  background: none;
+  color: inherit;
+  margin: 0.25em;
+}
+
+.agreementswitch:hover {
+  text-decoration: underline;
+}
+
+.agreementswitch:active {
+  opacity: 0.5;
+}
+
+.checkbox {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.agreement {
+  position: absolute;
+  top: -0em;
+  left: 9em;
+  font-size: 0.7em;
+  color:#2d2d2d;
+  text-decoration: inherit;
+}
+
+.buttonBelow {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.footer {
+  background-color: #ececec;
+  text-align: right;
+}
+
+.linkbox {
+  display: inline-block;
+  width: 12em;
+  margin: 2em 1em;
+  font-size: 1.1em;
+  text-align: right;
+}
+
+.link {
+  display: block;
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 0.25em;
+}
+
+.about {
+  font-size: 0.90em;
+  font-style: normal;
+}
+
+.twitter:hover {
+  color:#00a0ee;
+  text-decoration-color:#00a0ee;
+}
+
+.content{}
+
+/* ---------------- Text ---------------- */
+.serif {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-family: 'Noto Serif JP', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
+}
+
+.serifBold {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: 'Noto Serif JP', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
+}
+
+/* ---------------- Animation ---------------- */
 
 @-webkit-keyframes transform {
 
@@ -308,106 +377,124 @@ textarea:focus {
   }
 }
 
-.blob.mini {
-  transform: translate(-60%, calc(-65%)) scale(2.25, 0.65);
-  margin: 0;
+/* ---------------- Tags ---------------- */
+hr {
+  border-top: 2px dotted;
+  border-bottom: 0;
+  margin: 0 1em;
+  opacity: 0.5;
+  transition: 0.1s;
 }
 
-.blob.large {
-  width: 900%;
-  height: 315%;
-  min-width: 300px;
-  min-height: 105px;
-  top: -148%;
-  left: -148%;
-  pointer-events: none;
-}
-
-.logo {
-  height: 24vmin;
-  min-height: 60px;
-  position: fixed;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
-  -webkit-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
-  -o-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
-  transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
-}
-
-thankblob {
-  -webkit-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
-  -o-transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
-  transition: all 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
-}
-
-.thankmessage {
-  position: absolute;
-  pointer-events: none;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.agreement {
-  position: absolute;
-  top: 0.235em;
-  left: 8.5em;
-  font-size: 0.7em;
-  font-weight: 500;
-  color: #2d2d2d;
-  letter-spacing: 0.06em;
-  -webkit-font-feature-settings: "palt";
-     -moz-font-feature-settings: "palt";
-          font-feature-settings: "palt";
-  font-family: 'Shippori Mincho Medium', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
-}
-
-.submit {
+input[type='text'],
+input[type='url'],
+textarea {
   -webkit-appearance: none;
-  margin-top: 1em;
-  margin-bottom: 6em;
-  color: #4d4d4d;
-  font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'Noto Sans JP', 'メイリオ', sans-serif;
-  font-size: 1.2em;
-  font-weight: 600;
+     -moz-appearance: none;
+       -o-appearance: none;
+          appearance: none;
+  width: 100%;
+  min-width: 10em;
+  padding: 0.7em 1em;
+  border: 0;
+  border-radius: 8px;
+  outline: 0;
+  font-size: 0.75em;
+  color: #2d2d2d;
+  caret-color: #0a84ff;
+  -webkit-transition: 0.1s;
+       -o-transition: 0.1s;
+          transition: 0.1s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type='text'],
+input[type='url'] {
+  height: 2.5em;
+  margin-bottom: -0.5em;
+}
+
+input[type='url'] {
+  letter-spacing: 0;
+  font-family: 'Courier Prime', Consolas, 'Courier New', Courier, Monaco, monospace, 'BIZ UDGothic', "Hiragino Sans", "Hiragino Kaku Gothic ProN",'游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
+}
+
+a {
+  color: #2d2d2d;
+  text-decoration-color: #2d2d2d;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-family: 'Lora', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
+  font-style: italic;
+}
+
+textarea {
+  line-height: 1.75em;
+  margin-bottom: -0.8em;
+  resize: none;
+  transition: 0.1s;
+}
+
+input[type='text']:focus,
+input[type='url']:focus,
+textarea:focus {
+  -webkit-box-shadow: inset 2px 2px 3px #cbcbcb,
+                      inset -2px -2px 3px #ffffff;
+          box-shadow: inset 2px 2px 3px #cbcbcb,
+                      inset -2px -2px 3px #ffffff;
+}
+
+button,
+input[type='checkbox'] {
   cursor: pointer;
+  outline: 0;
+  border: 0;
+  background-color: #f4f4f4;
+}
+
+button[type='submit'] {
   width: 5em;
   height: 2.5em;
   border: 1px solid #d7d7d7;
-  background-color: #f4f4f4;
-  outline: 0;
   border-radius: 6px;
+  color: #2d2d2d;
+  font-family: 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
-.submit:hover,
-.submit:focus {
+button[type='submit']:hover {
+  border-color: #3e3e3e;
+  background-color: #3e3e3e;
   color: #f4f4f4;
-  border-color: #727272;
-  background-color: #727272;
 }
 
-.submit:active {
+button[type='submit']:active {
+  border-color: #2d2d2d;
+  background-color: #2d2d2d;
   color: #f4f4f4;
-  border-color: #5f5f5f;
-  background-color: #5f5f5f;
 }
 
+a {
+  text-decoration-line: none;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
+
+/* ---------------- Responsive ---------------- */
 @media screen and (max-width: 480px) {
-  .App {
+  html,
+  body {
     font-size: 13px;
   }
-  label {
-    padding: 0.2em 0.7em 0.65em;;
+  .column {
+    padding: 0.2em 0.7em 0.65em;
   }
   .subinfo {
-    top: 0.2em;
+    top: 0;
     left: 7.5em;
   }
   input[type='text'],
@@ -419,16 +506,16 @@ thankblob {
     padding: 0.5em 0.5em;
     transform: translateX(-3%);
   }
-  .required {
-    top: 0.25em;
-    left: 6.5em;
-  }
-  .requiredAm {
-    top: 0.55em;
+  .prColumn .required {
+    top: 0.75em;
     left: 4em;
   }
+  .checkbox {
+    margin-top: 1.25em;
+    margin-left: 0;
+  }
   .agreement {
-    top: -0.2em;
-    left: 5.5em;
+    top: 0.35em;
+    left: 6em;
   }
 }

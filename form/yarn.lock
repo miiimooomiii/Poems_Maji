@@ -351,6 +351,66 @@ esbuild-darwin-arm64@0.13.3:
   resolved "https://registry.yarnpkg.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.13.3.tgz#530a1326e7d18d62c9a54b6dce70f2b77ed50eec"
   integrity sha512-5E81eImYtTgh8pY7Gq4WQHhWkR/LvYadUXmuYeZBiP+3ADZJZcG60UFceZrjqNPaFOWKr/xmh4aNocwagEubcA==
 
+esbuild-dev-server-darwin-arm64@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-darwin-arm64/-/esbuild-dev-server-darwin-arm64-0.2.2.tgz#eb347cc87291cdbabd9fe739eb672e9f6aeccc9d"
+  integrity sha512-Vunt5tfpJFLmfoxwohALD77GOKTjje5VQTxvefXTXLVc992BZRpFWEPt529Ppihebuoz6alr5pY2+1DYFa5LDQ==
+
+esbuild-dev-server-darwin-x64@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-darwin-x64/-/esbuild-dev-server-darwin-x64-0.2.2.tgz#3e7ee96289fbc4bc817ce2d344255a84c33dfc89"
+  integrity sha512-3Kv3EATJbyt5NVpmB0CYEnko0LL9f+HPGB+OzRQlWLav6Gny68mLSDiw9/bnsQdCKW8K0iyuL7+szQ1NYYadMg==
+
+esbuild-dev-server-linux-arm64@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-linux-arm64/-/esbuild-dev-server-linux-arm64-0.2.2.tgz#f5ee06cc4f422a4327db4ebbbdbac1e5dd772164"
+  integrity sha512-bBXLL+VcnFRu8gf/4qo/gnUJnx9ea//WuuIbkMGRwBv8TW2XJf0swOkuNnEiNBdYv3pcwDn5dCO31NJx5GejhA==
+
+esbuild-dev-server-linux-arm@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-linux-arm/-/esbuild-dev-server-linux-arm-0.2.2.tgz#cc8e18d64bb4fa96f8db8e71b69111c1b0df00f1"
+  integrity sha512-RChnbUUAVYw6hiMAD09PQb27LbXsHnhHwPJFb/qA4O5iCp3QE33O/HLk9NFuRqc+0hX8E0UggA2ZPpLliExLPQ==
+
+esbuild-dev-server-linux-x32@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-linux-x32/-/esbuild-dev-server-linux-x32-0.2.2.tgz#32ddc55c8ee690ece6f4f9b469e409a91fdf3aee"
+  integrity sha512-rcp2LdMZ8DNQf9jKRZbhMIOLGoha1aDQQCmIj4gk3Na4Ht2dJ9De1ar9XwGM6flQKx2/EOBhaT1h3oW6aaVhDw==
+
+esbuild-dev-server-linux-x64@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-linux-x64/-/esbuild-dev-server-linux-x64-0.2.2.tgz#e3a6b5bf37284cfbb79d4f652b90b2dae28acebc"
+  integrity sha512-+wRIXJXt3367X+tEpR/We/4r8UBN2mF6dbYbvkVa5IWEtleEpO6642fF7ahXOO6SS/T/iDOvUQc1OwRbeGk2eQ==
+
+esbuild-dev-server-win32-arm64@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-win32-arm64/-/esbuild-dev-server-win32-arm64-0.2.2.tgz#2b355d6f5b67ef88cf9a6d6cbdf8a35a322b96f8"
+  integrity sha512-OHHtGceM9zfX3xQt8k3cl+KvCcBRg3wydpKLKbbcARNOEQ2fBrLFhvEqBLxjruHbZf06tnGAWVB/dy3JoWkG3A==
+
+esbuild-dev-server-win32-x32@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-win32-x32/-/esbuild-dev-server-win32-x32-0.2.2.tgz#c06cfd1882f9fd4aecdf634e8d1b3d55e6a865ba"
+  integrity sha512-HqRaMN66MoXZo16vkVngouk1EGeO72p4lQiyPRtq+odXRm60uH8jqdre0BeEE5nf9EBYWUqelhkb7S4O6OFN/w==
+
+esbuild-dev-server-win32-x64@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server-win32-x64/-/esbuild-dev-server-win32-x64-0.2.2.tgz#3be2bd3d31d817cb12ac19df5939402f0aed7da8"
+  integrity sha512-bRFAMzf5lvQxxBSpjRS2V8bPAUEGbcm6gmMfdbF+/Q+Ie3i6K/x2zGG/ukzVIyuJlx7ZI1OqG5wjWEcFgjmQgQ==
+
+esbuild-dev-server@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/esbuild-dev-server/-/esbuild-dev-server-0.2.2.tgz#4e0d1df7f48fb83896b20d46ca702988aee3acc9"
+  integrity sha512-uii5MVz9XMRPMQ4nziRlVFiKcB5v16s9EQ6Q/v3+tuZ7LRjzoRPbZF5kk3riUjFttT6BUVSUVPfVjn74X5+60Q==
+  optionalDependencies:
+    esbuild-dev-server-darwin-arm64 "0.2.2"
+    esbuild-dev-server-darwin-x64 "0.2.2"
+    esbuild-dev-server-linux-arm "0.2.2"
+    esbuild-dev-server-linux-arm64 "0.2.2"
+    esbuild-dev-server-linux-x32 "0.2.2"
+    esbuild-dev-server-linux-x64 "0.2.2"
+    esbuild-dev-server-win32-arm64 "0.2.2"
+    esbuild-dev-server-win32-x32 "0.2.2"
+    esbuild-dev-server-win32-x64 "0.2.2"
+
 esbuild-freebsd-64@0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.13.3.tgz#ce2896ac362e06eb82ca5dec06b2568901eb5afc"
