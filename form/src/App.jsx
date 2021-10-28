@@ -13,11 +13,11 @@ function App() {
   return (
     <div class={styles.App} id='app'>
       <header class={styles.header}>
-          <button class={styles.blob} style={'background-color:#000000'} id='blob' onClick={Blob} />
+          <button class={styles.blob} id='blob' onClick={Blob} />
         <img class={'${styles.logo} ${styles.op}'} src={Logo} alt='logo' />
       </header>
       <div class={styles.appbody}>
-        <form class={'${styles.form} ${styles.invisible} ${styles.content}'} action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSd03E7BPIpR0Y9E-vfnlUTf2eU4J3OGripRMN_YrJGthUE89w/formResponse' method='post' target='hidden_iframe' onsubmit={Thank}>
+        <form class={'${styles.form} ${styles.invisible} ${styles.content}'} action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSd03E7BPIpR0Y9E-vfnlUTf2eU4J3OGripRMN_YrJGthUE89w/formResponse' method='post' target='hidden_iframe' onsubmit={Thank} autocomplete='off'>
           <iframe style={'display:none'} id="hidden_iframe" name="hidden_iframe" />
             <label class={'${styles.column} ${styles.label} ${styles.serifBold}'} for='title'>題名
             <p class={'${styles.subinfo} ${styles.serif}'}>空欄は『無題』となります</p>
@@ -46,7 +46,7 @@ function App() {
             <label class={'${styles.column} ${styles.label} ${styles.ag}'} for='check'>
               <input class={'${styles.inlineBlock} ${styles.checkbox}'} id='check' type='checkbox' onChange={OnInputRequired} required />
               <p class={'${styles.subinfo} ${styles.required} ${styles.inlineBlock}'}>必須</p>
-              <p class={'${styles.agreement} ${styles.inlineBlock}'}>利用規約に同意します。</p>
+              <p class={'${styles.agreement} ${styles.inlineBlock} ${styles.serif}'}>利用規約に同意します。</p>
             </label>
           </div>
           <button class={styles.buttonBelow} name="button" type='submit' value="送信">送信</button>

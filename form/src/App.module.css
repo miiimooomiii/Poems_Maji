@@ -10,8 +10,12 @@
   position: fixed;
 }
 
+.op {}
+
+.scLock {}
+
 .appbody {
-  color: #000000;
+  color: #2d2d2d;
   display: block;
   margin-top: 10vh;
   margin-left: auto;
@@ -47,7 +51,7 @@
 
 .column:hover,
 .column:focus-within {
-  color:#2d2d2d;
+  color: #2d2d2d;
 }
 
 .column:hover {
@@ -57,14 +61,16 @@
 .column:focus-within {
   border-color: #656462;
 }
+
 .prColumn {
-  color:#2d2d2d;
+  color: #2d2d2d;
   border-color: #a5a4a2;
+  margin-bottom: 0;
 }
 
 .prColumn .column {
-  border:0;
-  margin-bottom:0;
+  border: 0;
+  margin-bottom: 0;
 }
 
 .label {
@@ -83,15 +89,15 @@
 }
 
 .required {
-  margin-top: 1.25em;
-  background-color:#e95151;
+  margin-top: 1.2em;
+  background-color: #e95151;
   font-family: 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
   font-size: 0.5em;
   font-weight: 700;
   color: #f4f4f4;
   border-radius: 4px;
   border: 0;
-  padding: 0.1em 0.6em 0;
+  padding: 0 0.6em 0.08em;
 }
 
 .prColumn .required {
@@ -99,7 +105,7 @@
 }
 
 .filled {
-  background-color:#d6d6d6;
+  background-color: #d6d6d6;
 }
 
 .visible {
@@ -122,19 +128,20 @@
 
 .blob {
   content: '';
+  background-color: #000000;
   position: fixed;
   outline: none;
   border: none;
   cursor: pointer;
   background-size: 1600% 1600%;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
   -webkit-animation:
     transform 30s ease-in-out infinite both alternate,
     movement 20s ease-in-out infinite both;
-          animation:
+  animation:
     transform 30s ease-in-out infinite both alternate,
     movement 20s ease-in-out infinite both;
   width: 80vmin;
@@ -191,8 +198,8 @@
   left: 50%;
   margin-right: -50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .ag:hover {
@@ -225,7 +232,7 @@
   top: -0em;
   left: 9em;
   font-size: 0.7em;
-  color:#2d2d2d;
+  color: #2d2d2d;
   text-decoration: inherit;
 }
 
@@ -241,6 +248,9 @@
 .footer {
   background-color: #ececec;
   text-align: right;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+  -o-transition: opacity 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
+  transition: opacity 0.4s cubic-bezier(0.01, 0.3, 0.01, 1.0);
 }
 
 .linkbox {
@@ -264,23 +274,24 @@
 }
 
 .twitter:hover {
-  color:#00a0ee;
-  text-decoration-color:#00a0ee;
+  color: #00a0ee;
+  text-decoration-color: #00a0ee;
 }
 
-.content{}
+.content {}
+
+.ed {}
 
 /* ---------------- Text ---------------- */
 .serif {
   font-weight: 500;
-  letter-spacing: 0.02em;
-  font-family: 'Noto Serif JP', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
+  font-family: 'Noto Sans JP', 'Noto Serif JP', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3', 'Shippori Mincho', Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
 }
 
 .serifBold {
   letter-spacing: 0.02em;
-  font-weight: 700;
-  font-family: 'Noto Serif JP', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3','Shippori Mincho',  Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
+  font-weight: 900;
+  font-family: 'Noto Sans JP', 'Noto Serif JP', Yu Mincho, '游明朝体', Hiragino Mincho Pro W3, 'ヒラギノ明朝 Pro W3', 'Shippori Mincho', Kozuka Mincho Pro, Kozuka Mincho Std, '小塚明朝 Pro R', '小塚明朝 Std R', 'ＭＳ Ｐ明朝', MS PMincho, Georgia, Times, serif;
 }
 
 /* ---------------- Animation ---------------- */
@@ -354,12 +365,12 @@
   0%,
   100% {
     -webkit-transform: translateY(0%) translateZ(-1);
-            transform: translateY(0%) translateZ(-1);
+    transform: translateY(0%) translateZ(-1);
   }
 
   50% {
     -webkit-transform: translateY(4%) translateZ(-1) rotateY(10deg);
-            transform: translateY(4%) translateZ(-1) rotateY(10deg);
+    transform: translateY(4%) translateZ(-1) rotateY(10deg);
   }
 }
 
@@ -368,12 +379,12 @@
   0%,
   100% {
     -webkit-transform: translateY(0%) translateZ(-1);
-            transform: translateY(0%) translateZ(-1);
+    transform: translateY(0%) translateZ(-1);
   }
 
   50% {
     -webkit-transform: translateY(4%) translateZ(-1) rotateY(10deg);
-            transform: translateY(4%) translateZ(-1) rotateY(10deg);
+    transform: translateY(4%) translateZ(-1) rotateY(10deg);
   }
 }
 
@@ -390,9 +401,9 @@ input[type='text'],
 input[type='url'],
 textarea {
   -webkit-appearance: none;
-     -moz-appearance: none;
-       -o-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   width: 100%;
   min-width: 10em;
   padding: 0.7em 1em;
@@ -403,10 +414,10 @@ textarea {
   color: #2d2d2d;
   caret-color: #0a84ff;
   -webkit-transition: 0.1s;
-       -o-transition: 0.1s;
-          transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input[type='text'],
@@ -417,7 +428,8 @@ input[type='url'] {
 
 input[type='url'] {
   letter-spacing: 0;
-  font-family: 'Courier Prime', Consolas, 'Courier New', Courier, Monaco, monospace, 'BIZ UDGothic', "Hiragino Sans", "Hiragino Kaku Gothic ProN",'游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
+  font-weight: 500;
+  font-family: 'Courier Prime', Consolas, 'Courier New', Courier, Monaco, monospace, 'BIZ UDGothic', "Hiragino Sans", "Hiragino Kaku Gothic ProN", '游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
 }
 
 a {
@@ -440,9 +452,9 @@ input[type='text']:focus,
 input[type='url']:focus,
 textarea:focus {
   -webkit-box-shadow: inset 2px 2px 3px #cbcbcb,
-                      inset -2px -2px 3px #ffffff;
-          box-shadow: inset 2px 2px 3px #cbcbcb,
-                      inset -2px -2px 3px #ffffff;
+    inset -2px -2px 3px #ffffff;
+  box-shadow: inset 2px 2px 3px #cbcbcb,
+    inset -2px -2px 3px #ffffff;
 }
 
 button,
@@ -486,17 +498,21 @@ a:hover {
 
 /* ---------------- Responsive ---------------- */
 @media screen and (max-width: 480px) {
+
   html,
   body {
     font-size: 13px;
   }
+
   .column {
     padding: 0.2em 0.7em 0.65em;
   }
+
   .subinfo {
     top: 0;
     left: 7.5em;
   }
+
   input[type='text'],
   input[type='url'],
   textarea {
@@ -506,14 +522,17 @@ a:hover {
     padding: 0.5em 0.5em;
     transform: translateX(-3%);
   }
+
   .prColumn .required {
     top: 0.75em;
     left: 4em;
   }
+
   .checkbox {
     margin-top: 1.25em;
     margin-left: 0;
   }
+
   .agreement {
     top: 0.35em;
     left: 6em;
