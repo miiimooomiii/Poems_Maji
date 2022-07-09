@@ -16,7 +16,7 @@ function onInput(this: HTMLElement) {
   else this.style.height = textareaHeight + 'px'
 }
 
-function onInputRequired(this: HTMLInputElement)  {
+function onInputRequired(this: HTMLInputElement) {
   if (this.value.replaceAll("　", "").trim() == '') this.classList.remove(styles.filled)
   else this.classList.add(styles.filled)
 }
