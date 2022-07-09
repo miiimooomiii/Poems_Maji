@@ -95,7 +95,7 @@ theme-neumorphism-shadow = #cbcbcb
 .prColumn .required
   margin-top 1.5em
 
-.filled
+.filled ~ .required
   background-color theme-40
 
 .visible
@@ -106,6 +106,9 @@ theme-neumorphism-shadow = #cbcbcb
   pointer-events none
   user-select none
   opacity 0%
+
+.disable
+  display none
 
 .fixed
   position fixed
@@ -229,13 +232,36 @@ theme-neumorphism-shadow = #cbcbcb
   cursor pointer
   margin-bottom 0.25em
 
-.about
+.labelTwitter
+  color theme-60
+  font-size 1em
+  margin -0.25em 0 0.25em
+  z-index 1
+
+.about, .twitter
+  position relative
   font-size 0.9em
   font-style normal
+  z-index 4
 
 .twitter:hover
   color #00a0ee
   text-decoration-color #00a0ee
+
+.idol
+  position fixed
+  bottom 0
+  width 40vw
+  max-width 512px
+  min-width 280px
+  pointer-events none
+  z-index 32
+
+.left
+  left -5vw
+
+.right
+  right -5vw
 
 // ---------------- Animation ----------------
 @keyframes transform
@@ -416,3 +442,16 @@ a
   .agreement
     top 0.35em
     left 6em
+
+  .dotsBox
+    width 115px
+    height 160px
+
+  .dots
+    clip-path polygon(0% 0%, 0% 100%, calc(100% - 10px - 6em) 100%, calc(100% - 10px - 6em) calc(100% - 42px - 2.5em), calc(100% - 12px) calc(100% - 42px - 2.5em), calc(100% - 12px) calc(100% - 42px), calc(100% - 20px - 6em) calc(100% - 42px), calc(100% - 20px - 6em) 100%, 100% 100%, 100% 0%)
+
+  button.dotsBox
+    right 0
+
+  .idol
+    min-width 200px

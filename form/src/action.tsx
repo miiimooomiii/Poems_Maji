@@ -11,13 +11,15 @@ export const Blob = () => {
     a = document.getElementById('app') as HTMLElement,
     b = document.getElementById('blob') as HTMLInputElement,
     o = document.getElementsByClassName('op'),
-    c = document.getElementsByClassName('content')
+    c = document.getElementsByClassName('content'),
+    idols = document.getElementById('idols') as HTMLInputElement
 
   b.disabled = true
 
   if (b.classList.contains(styles.mini)) {
     // ヘッダークリック時
     for (const i of c) i.classList.replace(styles.visible, styles.invisible)
+    idols.classList.replace(styles.invisible, styles.visible)
     scTop()
     setTimeout(() => {
       for (const i of o) i.classList.remove(styles.invisible)
@@ -26,6 +28,7 @@ export const Blob = () => {
     }, 400)
   } else {
     // ロゴクリック時
+    idols.classList.replace(styles.visible, styles.invisible)
     a.classList.add('scLock')
     b.classList.add(styles.mini)
     scTop()

@@ -5,36 +5,47 @@ import styles from './app.module.styl'
 import buttons from './button.module.styl'
 import font from './font.module.styl'
 
+const confirmation = () => {
+  var rt: boolean = confirm('投稿しますか？')
+  if (rt) {
+    alert('ご投稿ありがとうございます！🎉')
+  }
+}
+
 const Form: Component = () => {
   return (
-    <form className={`${styles.form} ${styles.invisible} content`} action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSd03E7BPIpR0Y9E-vfnlUTf2eU4J3OGripRMN_YrJGthUE89w/formResponse' method='post' target='hidden_iframe' onSubmit={Thank} autocomplete='off'>
+    <form className={`${styles.form} ${styles.invisible} content`} onSubmit={confirmation} action='https://docs.google.com/forms/u/1/d/e/1FAIpQLScUpiYpcL0d3oUgfNqO4brZUHon1zakVLV6fQe1DyUsw7DB8A/formResponse' method='post' target='hidden_iframe' autocomplete='off'>
       <iframe style={{ display: 'none' }} id='hidden_iframe' name='hidden_iframe' />
       <label className={`${styles.column} ${styles.label} ${font.serifBold}`} htmlFor='title'>題名
         <p className={`${styles.subinfo} ${font.serif}`}>空欄は『無題』となります</p>
-        <input id='title' name='entry.1866521228' type='text' placeholder="『無題』" />
+        <input id='title' name='entry.757242028' type='text' placeholder="『無題』" />
+      </label>
+      <label className={`${styles.column} ${styles.label} ${font.serifBold}`} htmlFor='idol'>アイドル名
+        <input id='idol' name='entry.1065417873' className={`${styles.requiredText}`} type='text' required />
+        <p className={`${styles.subinfo} ${styles.required} ${styles.inlineBlock}`} style={`left: 14em;`}>必須</p>
       </label>
       <label className={`${styles.column} ${styles.label} ${font.serifBold}`} htmlFor='poem'>本文
+        <textarea id='poem' name='entry.1293717028' className={`${styles.requiredText}`} required />
         <p className={`${styles.subinfo} ${styles.required} ${styles.inlineBlock}`}>必須</p>
-        <textarea id='poem' name='entry.1602729063' required />
       </label>
       <label className={`${styles.column} ${styles.label} ${font.serifBold}`} htmlFor='name'>著者名
         <p className={`${styles.subinfo} ${font.serif}`}>空欄は『匿名』となります</p>
-        <input id='name' name='entry.1285093387' type='text' placeholder="『匿名』" />
+        <input id='name' name='entry.1577385573' type='text' placeholder="『匿名』" />
       </label>
       <label className={`${styles.column} ${styles.label} ${font.serifBold}`} htmlFor='addition'>付記
         <p className={`${styles.subinfo} ${font.serif}`}>解説や補足などはこちらへ</p>
-        <textarea id='addition' name='entry.2007810462' />
+        <textarea id='addition' name='entry.1541480737' />
       </label>
-      <label className={`${styles.column} ${styles.label} ${font.serifBold}`} htmlFor='link'>リンク
+      <label className={`${styles.column} ${styles.label} ${font.serifBold} ${styles.disable}`} htmlFor='link'>リンク
         <p className={`${styles.subinfo} ${font.serif}`}>SNSやサイトのURLはこちらへ</p>
-        <input id='link' name='entry.272121178' type='url' placeholder='https://' />
+        <input id='link' name='' type='url' placeholder='https://' />
       </label>
-      <input type='hidden' name='entry.26876002' value='' />
-      <div className={`${styles.column} ${styles.prColumn}`}>
+      <input type='hidden' name='entry.1322311763' value='' />
+      <div className={`${styles.column} ${styles.prColumn} ${styles.disable}`}>
         <button className={`${styles.agreementswitch} ${font.serif}`} id='agreement' type='button' onClick={AgreementSwitch}>利用規約を読む</button>
         <hr />
         <label className={`${styles.column} ${styles.label} ${styles.ag}`} htmlFor='check'>
-          <input className={`${styles.inlineBlock} ${styles.checkbox}`} id='check' type='checkbox' onChange={OnInputRequired} required />
+          <input className={`${styles.inlineBlock} ${styles.checkbox}`} id='check' type='checkbox' onChange={OnInputRequired} />
           <p className={`${styles.subinfo} ${styles.required} ${styles.inlineBlock}`}>必須</p>
           <p className={`${styles.agreement} ${styles.inlineBlock} ${font.serif}`}>利用規約に同意します。</p>
         </label>

@@ -6,25 +6,27 @@ import styles from './app.module.styl'
 
 render(() => <App />, document.getElementById("root") as HTMLElement)
 
-const txH = 108
-const tx = document.getElementsByTagName('textarea')
-const rq = document.getElementsByClassName(styles.required)
+const textareaHeight = 108
+const textarea = document.getElementsByTagName('textarea')
+const requiredText = document.getElementsByClassName(styles.requiredText)
 
 function onInput(this: HTMLElement) {
   this.style.height = 'auto'
-  if (this.scrollHeight > txH) this.style.height = (this.scrollHeight) + 'px'
-  else this.style.height = txH + 'px'
+  if (this.scrollHeight > textareaHeight) this.style.height = (this.scrollHeight) + 'px'
+  else this.style.height = textareaHeight + 'px'
 }
 
 function onInputRequired(this: HTMLInputElement)  {
-  if (this.value == '') rq[0].classList.remove(styles.filled)
-  else rq[0].classList.add(styles.filled)
+  if (this.value.replaceAll("　", "").trim() == '') this.classList.remove(styles.filled)
+  else this.classList.add(styles.filled)
 }
 
-tx[0].addEventListener('input', onInputRequired, false)
+for (const item of textarea) {
+  if (item.value == '') item.setAttribute('style', 'height:' + textareaHeight + 'px;overflow-y:hidden;')
+  else item.setAttribute('style', 'height:' + (item.scrollHeight) + 'px;overflow-y:hidden;')
+  item.addEventListener('input', onInput, false)
+}
 
-for (let i = 0; i < tx.length; i++) {
-  if (tx[i].value == '') tx[i].setAttribute('style', 'height:' + txH + 'px;overflow-y:hidden;')
-  else tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;')
-  tx[i].addEventListener('input', onInput, false)
+for (const item of requiredText) {
+  item.addEventListener('input', onInputRequired, false)
 }
