@@ -1,14 +1,15 @@
 import type { Component } from "solid-js";
-import { Thank, OnInputRequired, AgreementSwitch } from './action'
+import { Blob, OnInputRequired, AgreementSwitch } from './action'
 
 import styles from './app.module.styl'
 import buttons from './button.module.styl'
 import font from './font.module.styl'
 
 const confirmation = () => {
-  var rt: boolean = confirm('投稿しますか？')
+  var rt: boolean = confirm('この内容で投稿しますか？')
   if (rt) {
-    alert('ご投稿ありがとうございます！🎉')
+    Blob()
+    alert("投稿されました。ありがとうございます！🎉");
   }
 }
 
