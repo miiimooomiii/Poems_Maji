@@ -5,11 +5,13 @@ import styles from './app.module.styl'
 import buttons from './button.module.styl'
 import font from './font.module.styl'
 
-const confirmation = () => {
+const confirmation = (e) => {
   var rt: boolean = confirm('この内容で投稿しますか？')
   if (rt) {
     Blob()
     alert("投稿されました。ありがとうございます！🎉");
+  } else {
+    e.preventDefault()
   }
 }
 
